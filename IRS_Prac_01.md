@@ -28,7 +28,7 @@ The objective of this Prac is to give you an introduction to the Google Earth En
 ## 3. Navigate through the GEE environment interface.
 1. Open up the Google Earth Engine environment by going to this address in the **Chrome browser**: [https://code.earthengine.google.com](https://code.earthengine.google.com). You should see the GEE landing page as below. This suggests that your signup and activation of the Earth Engine account went through well. 
 
-![Figure 1. The Google Earth Engine environment](Figures/Prac01_LandingPage)
+![Figure 1. The Google Earth Engine environment](Figures/Prac01_LandingPage.png)
 
 2. Notice GEE environment is divided up into four panels: 
 - The top-left panel has tabs for Scripts, Documentation and Assets  
