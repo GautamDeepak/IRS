@@ -8,16 +8,13 @@ Prac 1 - Introduction to Google Earth Engine (GEE) and basic JavaScript
 
 
 ### Prerequisites
-
 Completion of this Prac exercise requires the use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now in a new tab: [Earth Engine account registration](https://signup.earthengine.google.com/)
 
 Once registered you can access the Earth Engine environment [here:](https://code.earthengine.google.com)
 
 Google Earth Engine uses the JavaScript programming language. We will cover the very basics of this language during this course. If you would like more detail you can read through the introduction provided here: [JavaScript background](https://developers.google.com/earth-engine/tutorials/tutorial_js_01)
 
-
 ### Objective
-
 The objective of this Prac is to give you an introduction to the Google Earth Engine processing environment and basic JavaScript. By the end of this exercise, you will be able to navigate the Google Earth Engine environment, search for and find a broad range of remotely sensed datasets. 
 ---------------------------------------------------
 ## 1. Signup for the GEE environment
@@ -25,7 +22,7 @@ The objective of this Prac is to give you an introduction to the Google Earth En
 2. Follow the signup and activation process.
 3. For help look into the "Frequently asked questions" file in your learnline.
 
-## 3. Navigate through the GEE environment interface.
+## 2. Navigate through the GEE environment interface.
 1. Open up the Google Earth Engine environment by going to this address in the **Chrome browser**: [https://code.earthengine.google.com](https://code.earthengine.google.com). You should see the GEE landing page as below. This suggests that your signup and activation of the Earth Engine account went through well. 
 
 ![Figure 1. The Google Earth Engine environment](Figures/Prac01_LandingPage.png)
@@ -51,7 +48,7 @@ The objective of this Prac is to give you an introduction to the Google Earth En
 
 **Question:** *What do you think will the "Run" button do?*
 
-## 4. A basic introduction to JavaScript
+## 3. A basic introduction to JavaScript
 
 1. Time to write your first JavaScript for Earth Engine! In the editor panel, paste the below script and hit run. "Hello World!" will be printed on the console tab. 
  
@@ -98,7 +95,7 @@ print('My height is:', height);
 
 10. The best way to learn Scripting is to modify the script and make many mistakes - many many mistakes. If you are new to scripting and JavaScript, try to change and run the script and see what happens.
 
-## 3. Finding images and datasets
+## 4. Finding images and datasets
 
 1. There are basically two ways of finding images in GEE. One by exploring the data catalogue and second by just searching for the particular image that you want.
 
@@ -130,7 +127,6 @@ print('My height is:', height);
 4. Now click on the "Bands" tab. This tab has all the information about the bands that Sentinel-2 images have. The name of the band is how the GEE understands which band we want to do certain computations on. For example, if we want our computation on the Blue band, we need to call it "B2" and so on. Note the number of spectral bands (from B1 to B12) and the spatial resolution of each band. The Sentinel-2 has 13 spectral bands with a spatial resolution of 10-60 metres. Additionally, the table also contains information on the wavelength of each band and the scale. The scale represents how the reflectance values are stored in the image. In the above example, the scale is 0.0001, this means reflectance values (normally stored in the range of 0-1) are stored in the range 0-10000. 
 
 ![Figure 3. DataCatelog](Figures/Prac01_SentinelBands.png)
-## 11. The complete script used in this Prac
 
 5. Now you can hit close. You know how to look for and find satellite data and information associated with the data. 
 
