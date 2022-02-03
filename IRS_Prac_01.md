@@ -14,8 +14,6 @@ Once registered you can access the Earth Engine environment [here:](https://code
 
 Google Earth Engine uses the JavaScript programming language. We will cover the very basics of this language during this course. If you would like more detail you can read through the introduction provided here: [JavaScript background](https://developers.google.com/earth-engine/tutorials/tutorial_js_01)
 
-### Objective
-The objective of this Prac is to give you an introduction to the Google Earth Engine processing environment and basic JavaScript. By the end of this exercise, you will be able to navigate the Google Earth Engine environment, search for and find a broad range of remotely sensed datasets. 
 ---------------------------------------------------
 ## 1. Signup for the GEE environment
 1. If you have not done so already, sign up [here](https://code.earthengine.google.com/signup/)
