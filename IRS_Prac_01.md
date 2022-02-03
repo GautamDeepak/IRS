@@ -16,8 +16,6 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 
 ### Objective
 The objective of this Prac is to give you an introduction to the Google Earth Engine processing environment and basic JavaScript. By the end of this exercise, you will be able to navigate the Google Earth Engine environment, search for and find a broad range of remotely sensed datasets.
-
-
 ---------------------------------------------------
 ## 1. Signup for the GEE environment
 1. If you have not done so already, sign up [here](https://code.earthengine.google.com/signup/)
