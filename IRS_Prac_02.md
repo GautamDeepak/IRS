@@ -59,11 +59,7 @@ print(theSRTM);
 
 ## 3. Visualising the multi-band image
 
-## 3. Introduction to JavaScript
 
-## 4. Finding the avaialble datasets in the GEE
-
-## 5. Finding information about the datasets
 
 
 ## 11. The complete script used in this Prac
