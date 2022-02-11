@@ -1,5 +1,5 @@
 # Introductory Remote Sensing (ENV202/502)
-Prac 1 - Image visualisation (single- and multi-band)
+Prac 2 - Image visualisation (single- and multi-band)
 
 
 ### Acknowledgments 
@@ -9,6 +9,7 @@ Prac 1 - Image visualisation (single- and multi-band)
 ### Objective
 
 The objective of this Prac is to get you started with satellite images. By the end of this exercise, you will be learning the visualisation skills of the satellite images. We will work on the visualisation of single-band images (using SRTM) and multi-band images (using Sentinel-2). Using these skills, you will be able to visualise any other optical images in the Google Earth Engine.
+
 ---------------------------------------------------
 ## 1. Getting started with the image
 
@@ -65,7 +66,7 @@ Map.addLayer(theSRTM);
 
 ![Figure 8. Inspect SRTM](Figures/Prac02_Inspector.png)
 
-3. Now you can set some more appropriate visualization parameters by adjusting the code as follows (units of the min and max values are in meters above sea level):
+4. Now you can set some more appropriate visualization parameters by adjusting the code as follows (units of the min and max values are in meters above sea level):
 
 ```JavaScript
 // Display with adjusted min/max values
@@ -74,7 +75,7 @@ Map.addLayer(theSRTM, {min:0, max:300});
 ```
 ![Figure 9. Visualise SRTM](Figures/Prac02_MinMax.png)
 
-4. You will now be able to see the variation in the elevation range with low values in black and the highest points in white. Layers added to the map will have default names like "Layer 1", "Layer 2", etc. To improve the readability, we can give each layer a human­-readable name, by adding a title with the syntax in the following code. Don't forget to click run.
+5. You will now be able to see the variation in the elevation range with low values in black and the highest points in white. Layers added to the map will have default names like "Layer 1", "Layer 2", etc. To improve the readability, we can give each layer a human­-readable name, by adding a title with the syntax in the following code. Don't forget to click run.
 
 ```JavaScript
 // Display with min/max and layer title
@@ -82,17 +83,17 @@ Map.addLayer(theSRTM, {min: 0, max: 300}, 'Elevation above sea level');
 ```
 ![Figure 10. Rename title](Figures/Prac02_LayerName.png)
 
-5. Now you can also add the colour palette to make the elevation map look colourful and beautiful. Experiment with different colour combinations by changing/setting the palettes as per the example below. In the below example, lower elevations closer to the min value (0 m) are assigned to blue colour, higher elevations closer to max value (300 m) are assigned to red colour, and the medium elevation closer to 150 m elevation are assigned to yellow colour.
+6. Now you can also add the colour palette to make the elevation map look colourful and beautiful. Experiment with different colour combinations by changing/setting the palettes as per the example below. In the below example, lower elevations closer to the min value (0 m) are assigned to blue colour, higher elevations closer to max value (300 m) are assigned to red colour, and the medium elevation closer to 150 m elevation are assigned to yellow colour.
 
 ```Javascript
 // Display with min/max, layer title, and color scale
 Map.addLayer(theSRTM, {min: 0, max: 300, palette: ['blue', 'yellow', 'red']}, 'Color scale elevation above sea level');
 ```
-![Figure 13. Colour scale elevation](Prac1/colorelevation.png)
+![Figure 13. Colour scale elevation](Figures/Prac02_ColorElevation.png)
 
-6. That's how you display the single band image. The above line of the script is all you need. Note that JavaScript is sensitive to syntax, any error in syntax means the script won't run. For example, if you forgot to type a single ' or , or : or ) or ( in the above script, the script won't run. What you can play with and change in the above script are: theSRTM, 0, 300, blue, yellow, red, and Color scale elevation above sea level. 
+7. That's how you display the single band image. The above line of the script is all you need. Note that JavaScript is sensitive to syntax, any error in syntax means the script won't run. For example, if you forgot to type a single ' or , or : or ) or ( in the above script, the script won't run. What you can play with and change in the above script are: theSRTM, 0, 300, blue, yellow, red, and Color scale elevation above sea level. 
 
-7. Navigate to Kakadu national park where we have beautiful elevation changes. Try adjusting the min/max for better visualisation. Again, navigate to the Tibetan Pleatue and Himalayas, where you will see high topography over 3000 m. Try adjusting the min/max for better visualisation. Also, navigate to your home location and check out the elevation in the landscapes there.  
+8. Navigate to Kakadu national park where we have beautiful elevation changes. Try adjusting the min/max for better visualisation. Again, navigate to the Tibetan Pleatue and Himalayas, where you will see high topography over 3000 m. Try adjusting the min/max for better visualisation. Also, navigate to your home location and check out the elevation in the landscapes there.  
 
 ## 3. Visualising the multi-band image
 1. For the visualisation of multi-band images, we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas. We will use an image collected over Kakadu National Park, Australia.
@@ -119,11 +120,11 @@ var anImage = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
 
 **Question: ***How are the Red, Green, and Blue bands called in the above Sentinel-2 image (Hint: also look at Prac01)?*
 
-7. Now before we go any further, please save your current script by clicking on the "Save" button. Save it into your course repository so that you can come back to it at any stage, and from any device with a Chrome Browser (Yes, you can even run the script from your mobile phone - how cool is that!!).
+5. Now before we go any further, please save your current script by clicking on the "Save" button. Save it into your course repository so that you can come back to it at any stage, and from any device with a Chrome Browser (Yes, you can even run the script from your mobile phone - how cool is that!!).
 
 ![Figure 5. Save your script](Figures/Prac02_Save.png)
 
-8. Getting back to our multi-band image, Bands 2, 3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
+6. Getting back to our multi-band image, Bands 2, 3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
 
 ```JavaScript
 // Add RGB composite to map
@@ -132,19 +133,18 @@ Map.addLayer(anImage,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 
 ![Figure 6. First RGB](Figures/Prac02_RGBComposite.png)
 
-9. **Take a moment** to play with and understand the above Map.addLayer script. This is super important. Also compare with the Map.addLayer script we used for single band image. Note the differences
-- The syntax for the single- and multi-band image is roughly the same. The difference is: in the single band image, we don't need to define "bands" which we need to do for multi-band image (otherwise GEE won't know which band to display for us). The colour in the single band image comes from how we define "palettes" whereas the colour in multi-band image comes from the order in which the 3 bands are fed in (i.e. Red first, Green second, and Blue last results in RGB display). 
-![Figure 17. NDVI map](Figures/Prac02_MapAddLayer.PNG)
+7. **Take a moment** to play with and understand the above Map.addLayer script. This is super important. Also compare with the Map.addLayer script we used for single band image. Note the differences in the syntax for the single- and multi-band image: in the single band image, we don't need to define "bands" which we need to do for multi-band image (otherwise GEE won't know which band to display for us). The colour in the single band image comes from how we define "palettes" whereas the colour in multi-band image comes from the order in which the 3 bands are fed in (i.e. Red first, Green second, and Blue last results in RGB display). 
+![Figure 17. NDVI map](Figures/Prac02_MapAddLayer.png)
 
-10. The min/max of 0-3000 is about right for the Sentinel-2 - this results in a view similar to what we would see looking out of the window of an aeroplane. You can play with the min/max value to see the change in contrast. The band combination ['B4','B3','B2'] displays the RGB composite. In the coming prac, we will work with other band combinations to reveal various patterns in our landscape that may not be visible to human eyes. Zoom in a bit closer using the wheel of your mouse. These images are a fantastic resource for environmental mapping and monitoring. The visible spectrum bands are at 10 m spatial resolution, and the revisit time of the satellite constellation is every 6 days in this region. Thanks, ESA!
+8. The min/max of 0-3000 is about right for the Sentinel-2 - this results in a view similar to what we would see looking out of the window of an aeroplane. You can play with the min/max value to see the change in contrast. The band combination ['B4','B3','B2'] displays the RGB composite. In the coming prac, we will work with other band combinations to reveal various patterns in our landscape that may not be visible to human eyes. Zoom in a bit closer using the wheel of your mouse. These images are a fantastic resource for environmental mapping and monitoring. The visible spectrum bands are at 10 m spatial resolution, and the revisit time of the satellite constellation is every 6 days in this region. Thanks, ESA!
 
 ![Figure 7. Zoomed RGB](Figures/Prac02_Zoomed.png)
 
-11. Interpret the image taking into consideration when the image was captured. In the wet season, Northern Australia is vibrant with photosynthetically active vegetations, the surge in flood plains and water bodies. While in the dry season, the vegetation dries up,  bush fire takes hold, and water bodies retreat. 
+9. Interpret the image taking into consideration when the image was captured. In the wet season, Northern Australia is vibrant with photosynthetically active vegetations, the surge in flood plains and water bodies. While in the dry season, the vegetation dries up,  bush fire takes hold, and water bodies retreat. 
 
-12. Don't forget to save your script. You can use CTRL+S in the windows computer (Command+S in Mac) to save your script. 
+10. Don't forget to save your script. You can use CTRL+S in the windows computer (Command+S in Mac) to save your script. 
 
-## 11. The complete script used in this Prac
+## 4. The complete script used in this Prac
 ```JavaScript
 // print the image information to the console
 print(theSRTM);
