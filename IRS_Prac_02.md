@@ -8,7 +8,7 @@ Prac 2 - Image visualisation (single- and multi-band)
 
 ### Objective
 
-The objective of this Prac is to get you started with satellite images. By the end of this exercise, you will be learning the visualisation skills of the satellite images. We will work on the visualisation of single-band images (using SRTM) and multi-band images (using Sentinel-2). Using these skills, you will be able to visualise any other optical images in the Google Earth Engine.
+The objective of this Prac is to get you started with satellite images. By the end of this exercise, you will learn the visualisation skills of the satellite images. We will work on visualisation of single-band image (using NASA SRTM as an example) and multi-band image (using Sentinel-2 as an example). Using these skills, you will be able to visualise any other optical images in the Google Earth Engine.
 
 ---------------------------------------------------
 ## 1. Getting started with the image
@@ -29,7 +29,7 @@ The objective of this Prac is to get you started with satellite images. By the e
 
 **Question:** *How many bands did this data have and what are their spatial resolution?*
 
-5. Rename the default variable name "image" to anything you like. The naming convention is that the name should be short but descriptive enough for you to understand when you revisit this script later in the future. Here we will rename the image "theSRTM".
+5. Rename the default variable name "image" to anything you like. The naming convention is that the name should be short but descriptive enough for you to understand when you revisit this script later in the future. Here we will rename the image "theSRTM". This means we agreed with the GEE environment that "theSRTM" refers to the SRTM elevation dataset.
 
 ![Figure 5. Rename image](Figures/Prac02_Rename.png)
 
