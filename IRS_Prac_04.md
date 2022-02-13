@@ -55,15 +55,15 @@ Map.addLayer(anImage, {bands: ['B4', 'B3', 'B2'],min:0, max: 0.3, gamma:1.4}, 'T
 
 1. Alright, now that we have found the image we want to work with, let's define the regions for different landcover that we want to plot the spectral reflectance curve of. Here, let's work with the following landcover types: forest, urban, water, bare land, and agriculture. Hover over the "Geometry Imports", click on ‘new layer’, select the rectangle geometry and draw a rectangular polygon over the waters.  After you are done, rename the "geometry" to  "water".
 
-![Figure 2. Make rectangle polygons](Figures/Prac04_WaterPolygon.PNG)
+![Figure 2. Make rectangle polygons](Figures/Prac04_WaterPolygon.png)
 
 2. To plot the spectral reflectance curve, we need to change the geometry to feature. Click on the gear icon (settings) next to the water variable in our imported headings. Then, change the 'Import as'  from 'Geometry' to 'Feature'.  Use '+ property' and define Property as 'label' and value as the name of the class (e.g. water, urban, forest). Be consistent in the spelling, upper/lower case. 
 
-![Figure 2. Defining Feature and Labels](Figures/Prac04_Feature.PNG)
+![Figure 2. Defining Feature and Labels](Figures/Prac04_Feature.png)
 
 3. Now repeat the above step 1 and 2 for other landcover types: forest, urban, bare land, and agriculture. By the end, you should have five landcover types defined as below. 
 
-![Figure 2. Defining Feature and Labels](Figures/Prac04_AllLandcover.PNG)
+![Figure 2. Defining Feature and Labels](Figures/Prac04_AllLandcover.png)
 
 4. Now specify the bands that you want to use to construct the spectral reflectance curve. The Landsat-8 has 11 bands. You can use all the available bands or use selected bands. Look into the available bands and think about if some bands are useful for a specific landcover type. In the below script, I have used bands 1-7 which include the bands 1-7 which include the Costal blue, blue, green, red, NIR, SWIR1 and SWIR2, which suffice for the landcover type that we are interested in.
 
