@@ -104,7 +104,7 @@ Map.addLayer(anImage, trueViz, "true-colour image");
 
 3. In order to find out more information at specific locations, we can use the Inspector tool which is located in the Console Panel - left hand tab. Click on the Inspector tab and then click on the image in the map view. Wherever you click on the image, the band values at that point will be displayed in the Inspector window. Click over some different patch types (sports fields, tennis courts, mangroves, ocean, beach, houses) to see how each different patch have different spectral profile.
 
-![Figure 8. Band values](Figures/Prac03_BandValues.PNG)
+![Figure 8. Band values](Figures/Prac03_BandValues.png)
 
 4. Now let's have a look at a false colour composite - we need to bring in the near-infrared band for this. In the false color composite, NIR band is displayed in red color, red band is displayed in green color and green band is displayed in blue color. Paste the following lines below the ones you’ve already added, and click "Run".
 
