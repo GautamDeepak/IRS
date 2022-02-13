@@ -1,5 +1,5 @@
 # Introductory Remote Sensing (ENV202/502)
-Prac 3 - Working through image collection to find right image and computatin of indices
+Prac 3 - Working through image collection to find right image and band combination
 
 ### Acknowledgments
 - [Earth Engine Beginning Curriculum](https://docs.google.com/document/d/1ZxRKMie8dfTvBmUNOO0TFMkd7ELGWf3WjX0JvESZdOE/edit#!)
@@ -111,7 +111,7 @@ Map.addLayer(anImage, trueViz, "true-colour image");
 
 2. In avove example, I clicked on the sportsfield. The band values represent the spectral characterstics of photosynthetically active vegetation. For example, I can see absorption in the blue (B2) and red (B4) band, the green band (B3) is a bit more reflective while the NIR band (B8) is highly reflective. Now, its your turn to inspect different landcover types. Try to figure out which landcover types look similar (in the band value) and which are clearly distinct.  
 
-4. Now let's learn how to create false color composites. The Sentinel-2 has 13 spectral bands. However, our true color display only utilises three bands (Red Green and Blue). So, in a sense we are not using the full potential of the Sentinel-2 capabilities. Similar to how we displayed true color composite, we can display the flase color composite. We displayed true color composite by displaying Red band in red color, green band in green color and blue band in blue color. To create a false color composite, we play with the band combination and plug in different bands. For example, in the below false color infrared composite, NIR band is displayed in red color, red band is displayed in green color and green band is displayed in blue color. Paste the following lines and click "Run".
+3. Now let's learn how to create false color composites. The Sentinel-2 has 13 spectral bands. However, our true color display only utilises three bands (Red Green and Blue). So, in a sense we are not using the full potential of the Sentinel-2 capabilities. Similar to how we displayed true color composite, we can display the flase color composite. We displayed true color composite by displaying Red band in red color, green band in green color and blue band in blue color. To create a false color composite, we play with the band combination and plug in different bands. For example, in the below false color infrared composite, NIR band is displayed in red color, red band is displayed in green color and green band is displayed in blue color. Paste the following lines and click "Run".
 
 ```JavaScript
 //Define false-colour visualization parameters.
@@ -130,9 +130,9 @@ Map.addLayer(anImage, falseViz, "false-color composite");
 
 **Question*** We know that vegetation looks green. In the above false color infrared composite, green band is displayed as blue color. That means green vegetation should have appeared as blue color. Why instead vegetation appears as red color?*
 
-5. The above false-colour infrared composites place the near infra-red band in the red channel. Chlorophyll content in green leaves have a strong response in NIR band. Vegetation that appears dark green in true colour, thus appears bright red in the false-colour. Note the variations in red that can be seen in the vegetation bordering Rapid Creek. False color composites help us to contrast between different landcover types or highlight some landcover types. Sometimes those contrast may not appear clearly on the true color composite. The false-color infrared composite helps us clearly visualise the photosynthetically active vegetation. 
+4. The above false-colour infrared composites place the near infra-red band in the red channel. Chlorophyll content in green leaves have a strong response in NIR band. Vegetation that appears dark green in true colour, thus appears bright red in the false-colour. Note the variations in red that can be seen in the vegetation bordering Rapid Creek. False color composites help us to contrast between different landcover types or highlight some landcover types. Sometimes those contrast may not appear clearly on the true color composite. The false-color infrared composite helps us clearly visualise the photosynthetically active vegetation. 
 
-6. Lets do one more false color composite and you can practice the rest. I am going to do do the land/water false color composite. This composite uses following bands: NIR (B8), SWIR(B11), and Red(B4).  
+5. Lets do one more false color composite and you can practice the rest. I am going to do do the land/water false color composite. This composite uses following bands: NIR (B8), SWIR(B11), and Red(B4).  
 
 ```JavaScript
 //Define land/water false-colour visualization parameters.
@@ -221,24 +221,15 @@ var falseLandWaterViz= {
 // Add the image to the map, using the visualization parameters.
 Map.addLayer(anImage, falseLandWaterViz, "false-color Land/Water");
 ```
-------
-### Practice exercise
-
-1. Search for a cloud free Sentinel-2 image from May, July and September 2018 collected over Litchfield National Park (Litchfield is located south of Darwin, near the town of Batchelor, Northern Territory, Australia).
-2. Calculate NDVI for each of the scenes and load them into the map view.
-3. Inspect how NDVI varies spatially across each image, and explore how patterns in NDVI vary according to time of year.
-4. Search for a cloud free Landsat 8 image (USGS Landsat 8 Surface Reflectance Tier 1) from May, July and September 2018 collected over Litchfield National Park.
-5. Remember that the band position of RED and NIR wavelengths might differ between different sensors. For Landsat 8, the metadata property for cloud cover is 'CLOUD_COVER'.
-6. Compare NDVI values attained from the two sensors and think about why they might differ.
 
 -------
 ### Thank you
 
-I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel's [Introduction to Remote Sensing of the Environment Playlist](https://www.youtube.com/playlist?list=PLf6lu3bePWHDi3-lrSqiyInMGQXM34TSV).
+I hope you found this prac useful. A recorded video of this prac can be found on your learnline.
+Coming up next week: Analysis of spectral reflectance curve.
 
-#### Kind regards, Shaun R Levick (edit Deepak Gautam)
+#### Kind regards, Deepak Gautam
 ------
-
-
 ### The end
+
 
