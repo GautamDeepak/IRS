@@ -172,7 +172,7 @@ Map.addLayer(anImage, falseLandWaterViz, "false-color Land/Water");
 
 ## 5. Complete script 
 ```JavaScript
-var campus = /* color: #d63000 */ee.Geometry.Point([140.8753806158861, -37.230552670447054]);
+var campus = /* color: #d63000 */ee.Geometry.Point([130.86795149296128, -12.370376579036192]);
 var sent2 = ee.ImageCollection("COPERNICUS/S2");
 
 var anImage = sent2
