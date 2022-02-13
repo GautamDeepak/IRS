@@ -98,15 +98,20 @@ Map.addLayer(anImage, trueViz, "true-colour image");
 
 **Note:** *The above script could have been written as: -Map.addLayer(anImage, {bands: ["B4", "B3", "B2"], min: 0, max: 3000 }, "true-colour image");  ... However, we have defined a variable called trueViz and plugged in that variable in the Map.addLayer command*
 
-2. Above code specifies that for a true colour image, bands 4,3 and 2 should be used in the RGB composite. After the image appears in the map, you can zoom in and explore Darwin. We see great detail in the Sentinel-2 image, which is at 10m resolution for the selected bands. The (+) and (-) symbols in the upper left corner of the map can be used for zooming in and out (also possible with the mouse scroll wheel/trackpad). A left click with the mouse brings up the "hand" for panning to move around the image. Moving your mouse over the "Layers" button in the top right-hand corner of the map panel shows you the available layers, and lets you adjust the opacity of different layers.
+6. Above code specifies that for a true colour image, bands 4,3 and 2 should be used in the RGB composite. After the image appears in the map, you can zoom in and explore Darwin. We see great detail in the Sentinel-2 image, which is at 10m resolution for the selected bands. The (+) and (-) symbols in the upper left corner of the map can be used for zooming in and out (also possible with the mouse scroll wheel/trackpad). A left click with the mouse brings up the "hand" for panning to move around the image. Moving your mouse over the "Layers" button in the top right-hand corner of the map panel shows you the available layers, and lets you adjust the opacity of different layers.
 
 ![Figure 7. Adding a true colour image to the map](Figures/Prac03_TrueColor.png)
 
-3. In order to find out more information at specific locations, we can use the Inspector tool which is located in the Console Panel - left hand tab. Click on the Inspector tab and then click on the image in the map view. Wherever you click on the image, the band values at that point will be displayed in the Inspector window. Click over some different patch types (sports fields, tennis courts, mangroves, ocean, beach, houses) to see how each different patch have different spectral profile.
+7. Try moving your marker geometry to a different location (e.g. to NSW), run the script and see what happens... You should get a cloud free image from the NSW. So, you now have skills to look for images from anywhere in the globe (by moving your geometry) and from a desired time range (by adjusting start date and end date in the filtering script). Please practice and once you are happy with the filtering and displaying images, move the marker back to the Charles Darwin University campus for the following steps.
+
+## 3. Band combination
+1. Different landcover types on the earth surface such as water, forest, grassland, desert, bareland etc interacts differently with the electromagnetic energy. As a result, the spectral information recorded by the satellite for those landcover types varies. For example the spectral value in the nearinfrared region for vegetation is quite high while for the water is quite low. In order to find out more about how different landcovers interact with the electromagnetic energy, you can use the Inspector tool which is located in the Console Panel - left hand tab. Click on the Inspector tab and then click on the image in the map view. Wherever you click on the image, the band values at that point will be displayed in the Inspector window. Click over some different landcover types (sports fields, tennis courts, mangroves, ocean, beach, houses) to see how each different landcover have different spectral profile.
 
 ![Figure 8. Band values](Figures/Prac03_BandValues.png)
 
-4. Now let's have a look at a false colour composite - we need to bring in the near-infrared band for this. In the false color composite, NIR band is displayed in red color, red band is displayed in green color and green band is displayed in blue color. Paste the following lines below the ones you’ve already added, and click "Run".
+2. In avove example, I clicked on the sportsfield. The band values represent the spectral characterstics of photosynthetically active vegetation. For example, I can see absorption in the blue (B2) and red (B4) band, the green band (B3) is a bit more reflective while the NIR band (B8) is highly reflective. Now, its your turn to inspect different landcover types. Try to figure out which landcover types look similar (in the band value) and which are clearly distinct.  
+
+4. Now let's learn how to create false color composites. The Sentinel-2 has 13 spectral bands. However, our true color display only utilises three bands (Red Green and Blue). So, in a sense we are not using the full potential of the Sentinel-2 capabilities. Similar to how we displayed true color composite, we can display the flase color composite. We displayed true color composite by displaying Red band in red color, green band in green color and blue band in blue color. To create a false color composite, we play with the band combination and plug in different bands. For example, in the below false color infrared composite, NIR band is displayed in red color, red band is displayed in green color and green band is displayed in blue color. Paste the following lines and click "Run".
 
 ```JavaScript
 //Define false-colour visualization parameters.
@@ -123,55 +128,49 @@ Map.addLayer(anImage, falseViz, "false-color composite");
 ![Figure 9. Adding a false colour composite to the map](Figures/Prac03_FalseColor
 .png)
 
-**Question*** We know that vegetation looks green. In the false color composite green band is displayed as blue color. That means green vegetation should have appeared as blue color. Why instead vegetation appears as red color?*
+**Question*** We know that vegetation looks green. In the above false color infrared composite, green band is displayed as blue color. That means green vegetation should have appeared as blue color. Why instead vegetation appears as red color?*
 
-5. False-colour composites place the near infra-red band in the red channel. Chlorophyll content in green leaves have a strong response in NIR band. Vegetation that appears dark green in true colour, thus appears bright red in the false-colour. Note the variations in red that can be seen in the vegetation bordering Rapid Creek. 
+5. The above false-colour infrared composites place the near infra-red band in the red channel. Chlorophyll content in green leaves have a strong response in NIR band. Vegetation that appears dark green in true colour, thus appears bright red in the false-colour. Note the variations in red that can be seen in the vegetation bordering Rapid Creek. False color composites help us to contrast between different landcover types or highlight some landcover types. Sometimes those contrast may not appear clearly on the true color composite. The false-color infrared composite helps us clearly visualise the photosynthetically active vegetation. 
 
-UP TO HERE DEEPAK
+6. Lets do one more false color composite and you can practice the rest. I am going to do do the land/water false color composite. This composite uses following bands: NIR (B8), SWIR(B11), and Red(B4).  
 
+```JavaScript
+//Define land/water false-colour visualization parameters.
+var falseLandWaterViz= {
+  bands: ["B8", "B11", "B4"],
+  min: 0,
+  max: 3000,
+  };
 
-## 4. Calculating indices: an example of NDVI
-
-1. Next, let's calculate the normalised-difference vegetation index (NDVI) for this image. NDVI is an index calculated from the RED and NIR bands, according to this equation:
-
-NDVI = (NIR - RED)/(NIR + RED)
-
-Paste the following lines below the ones you’ve already added, and click "Run". NDVI values range from 0 to 1, and the higher the value the more "vigorous" the vegetation.
-
-
-```javascript
-//Define variable NDVI from equation
-var ndviImage = anImage.expression(
-  "(NIR - RED) / (NIR + RED)",
-  {
-    RED: anImage.select("B4"),    //  RED
-    NIR: anImage.select("B8"),    // NIR
-    BLUE: anImage.select("B2")    // BLUE
-  });
-
-// Add the NDVI image to the map, using the visualization parameters.
-Map.addLayer(ndviImage, {min: 0, max: 1}, "NDVI");
+// Add the image to the map, using the visualization parameters.
+Map.addLayer(anImage, falseLandWaterViz, "false-color Land/Water");
 ```
 
-![Figure 10. Retrieving NDVI from Sentinel-2](Prac3/ndvi.png)
+![Figure 9. Adding a false colour composite to the map](Figures/Prac03_FalseLandWater.png)
 
-2. Explore different parts of the image and see how NDVI values vary with different substrate types.
+## 4. Exercise for you
 
-3. Now you can adopt the code that we developed in Prac1 to add color palette to the NDVI image.
+1. Filter the Sentinel-2 image collection to get two cloud free images from the Darwin region during: the wet season of 2016 and dry season of 2021.
+*Hint: You need to do the filtering two times. First filtering to get the 2016 image and the second filtering to get the 2021 image. Store the two images in two variables e.g. var wet2016Image = ..., and var dry2021Image = ...*
 
-```javascript
-// Add color palette to the NDVI image.
-Map.addLayer(ndviImage, {min: 0, max: 1, palette: ['red','yellow','green','darkgreen']}, "NDVI-colored");
-```
+2. Display the two images in true color composite and examine what has changed in the the landscape between 2016 and 2021. 
 
-![Figure 10. Retrieving NDVI from Sentinel-2](Prac3/NDVI-colored.PNG)
+3. Display the two images in false color infrared composite and examine how has vegetation cover and condition has changed in the six years.  
 
-4. At this point you can just just click and drag the point you created (campus) to anywhere in the world and hit run to get all the maps that has been scripted. In the below example, I moved the point to wine-growing region of Coonawarra, SA. 
+4. So far we have only explored two visualisation options (true-colour and false-colour infrared), but there are many more possible combinations:
+    - True colour: 4 3 2
+    - False colour infrared: 8 4 3
+    - False colour urban: 12 11 4
+    - Agriculture: 11 8 2
+    - Healthy vegetation: 8 11 2
+    - Land/Water: 8 11 4
+    - Shortwave infrared: 12 8 4
+    - Vegetation analysis: 11 8 4
+	- you can also make your own combination
 
-![Figure 10. Retrieving NDVI from Sentinel-2](Prac3/coonawarraNDVI.PNG)
+5. Experiment with the combinations listed above and think about why we might want to use them.
 
-
-### 5. Complete script 
+## 5. Complete script 
 ```JavaScript
 var campus = /* color: #d63000 */ee.Geometry.Point([140.8753806158861, -37.230552670447054]);
 var sent2 = ee.ImageCollection("COPERNICUS/S2");
@@ -212,20 +211,15 @@ var falseViz = {
 // Add the image to the map, using the visualization parameters.
 Map.addLayer(anImage, falseViz, "false-color composite");
 
-//Define variable NDVI from equation
-var ndviImage = anImage.expression(
-  "(NIR - RED) / (NIR + RED)",
-  {
-    RED: anImage.select("B4"),    //  RED
-    NIR: anImage.select("B8"),    // NIR
-    BLUE: anImage.select("B2")    // BLUE
-  });
+//Define land/water false-colour visualization parameters.
+var falseLandWaterViz= {
+  bands: ["B8", "B11", "B4"],
+  min: 0,
+  max: 3000,
+  };
 
-// Add the NDVI image to the map, using the visualization parameters.
-Map.addLayer(ndviImage, {min: 0, max: 1}, "NDVI");
-
-// Add color palette to the NDVI image.
-Map.addLayer(ndviImage, {min: 0, max: 1, palette: ['red','yellow','green','darkgreen']}, "NDVI-colored");
+// Add the image to the map, using the visualization parameters.
+Map.addLayer(anImage, falseLandWaterViz, "false-color Land/Water");
 ```
 ------
 ### Practice exercise
