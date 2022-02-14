@@ -1,37 +1,18 @@
 # Introductory Remote Sensing (ENV202/502)
-Prac 1 - Introduction to Google Earth Engine and basic JavaScript
+Prac 5 - Introduction to Google Earth Engine and basic JavaScript
 
 
 ### Acknowledgments 
 - [Earth Engine Beginning Curriculum](https://docs.google.com/document/d/1ZxRKMie8dfTvBmUNOO0TFMkd7ELGWf3WjX0JvESZdOE/edit#!)
 - [Google Earth Engine guide](https://developers.google.com/earth-engine/guides)
 
-
-### Prerequisites
-
-
-Completion of this Prac exercise requires the use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now in a new tab: [Earth Engine account registration](https://signup.earthengine.google.com/)
-
-Once registered you can access the Earth Engine environment [here:](https://code.earthengine.google.com)
-
-Google Earth Engine uses the JavaScript programming language. We will cover the very basics of this language during this course. If you would like more detail you can read through the introduction provided here: [JavaScript background](https://developers.google.com/earth-engine/tutorials/tutorial_js_01)
-
-
 ### Objective
 
-The objective of this Prac is to give you an introduction to the Google Earth Engine processing environment and basic JavaScript. By the end of this exercise, you will be able to navigate the Google Earth Engine environment, search for, find, and visualise a broad range of remotely sensed datasets. 
+The objective of this Prac is to get you started with satellite images. By the end of this exercise, you will learn the visualisation skills of the satellite images. We will work on visualisation of single-band image (using NASA SRTM as an example) and multi-band image (using Sentinel-2 as an example). Using these skills, you will be able to visualise any other optical images in the Google Earth Engine.
+
 ---------------------------------------------------
-## 1. Signup for the GEE environemnt
 
 ## 2. Introduction to the GEE environemnt
-
-**Question:** *Modify the above script to print your name in the console.*
-
-## 3. Introduction to JavaScript
-
-## 4. Finding the avaialble datasets in the GEE
-
-## 5. Finding information about the datasets
 
 
 ## 11. The complete script used in this Prac
