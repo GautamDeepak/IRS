@@ -41,7 +41,7 @@ Map.addLayer(anImage, {bands: ['B4', 'B3', 'B2'],min:0, max: 0.3}, 'True colour 
 
 6. Also note that to display the true colour, the min/max values are different to the Sentinel-2. Here we have a max of 0.3 while in Sentinel-2 we had a max of 3000. This is because the reflectance value in Landsat is stored between 0 and 1, while in Sentinel-2 the reflectance value is stored between 0 and 10000.
 
-7. The Landsat-8 image over the Cairns region looks a bit darker, we can improve the brightness by increasing the gamma value. Replace the above Map.addLayer script with the below script to adjust brightness. 
+7. Have a look around the scene and familiarise yourself with the landscape. You'll notice the image is quite dark image - we can adjust the brightness/contrast using the settings wheels for the layer we created in the Layers tab. Slide the Gamma adjuster slightly to the right (from 1.0 to 1.4) to increase the brightness of the scene. Alternatively, in the previous line of script, you can encode the gamma value in the visualisation parameter as: "{bands: ['B4', 'B3', 'B2'],min:0, max: 3000, gamma:1.4}"  
 
 ```JavaScript
 //Add true-clour composite to map
