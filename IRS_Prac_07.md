@@ -181,9 +181,9 @@ Now you have the base accuracy assessment numbers. Are you happy with the classi
 
 4. Changing the input bands: - We classified the landscape using 6 bands [B2--B7]. You could always add additional bands which may improve the classification. 
 
-6. Adding derived indices as input: - In addition to the bands, you could try to add ancillary information, such as elevation data, or a derived index such as NDVI, NDWI which may help better discrimination between the classes. 
+5. Adding derived indices as input: - In addition to the bands, you could try to add ancillary information, such as elevation data, or a derived index such as NDVI, NDWI which may help better discrimination between the classes. 
 
-5. Changing the input image: - We used a winter scene from Landsat-8. We could try a summer scene from Landsat-8, or switch over to a Sentinel-2 image.
+6. Changing the input image: - We used a winter scene from Landsat-8. We could try a summer scene from Landsat-8, or switch over to a Sentinel-2 image.
 
 ## 5. The complete script used in this Prac
 ```JavaScript
