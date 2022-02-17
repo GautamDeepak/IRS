@@ -5,8 +5,6 @@ Prac 6 - Image Classification - part 1
 ### Acknowledgments 
 - [Earth Engine Beginning Curriculum](https://docs.google.com/document/d/1ZxRKMie8dfTvBmUNOO0TFMkd7ELGWf3WjX0JvESZdOE/edit#!)
 - [Google Earth Engine guide](https://developers.google.com/earth-engine/guides)
-- Google Earth Engine Team
-- Google Earth Engine Developers group
 - David Saah and Nicholas Clinton
 
 ### Objective
