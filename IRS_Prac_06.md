@@ -146,7 +146,7 @@ Map.addLayer(classifiedImage, {min: 0, max: 4, palette: ['red', 'blue', 'darkgre
 Map.addLayer(classifiedImage.updateMask(classifiedImage.select('classification').eq(2)), {palette: ['green'], min: 0, max: 1},'Forest only');
 ```
 
-![Figure 9. Classified map](Figures/Prac06_Classified.png)
+![Figure 9. Classified map](Figures/Prac06_Masked.png)
 
 6. Not too bad hey. Looks like the forest classification was reasonably okay. Now you can modify the script to check for other individual classes. 
 
