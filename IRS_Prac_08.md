@@ -16,14 +16,10 @@ Leica BLK360 was originally designed for use in arcitecture and surveying. The u
 
 Have a read about the Leica BLK360 [here](https://leica-geosystems.com/products/laser-scanners/scanners/blk360)
 
-Have a look at the introduction to the BLK360
-
+**Have a look at the introduction to the BLK360**
 [![An Intro to the BLK360](Figures/Prac08_Leica.png)](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK "An Intro to the BLK360")
 
-
- [here](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK) 
-
-Have a look at the scanning with the BLK360 
+**Have a look at the scanning with the BLK360**
 [![scanning with the BLK360](Figures/Prac08_ScanningWithBLK360.png)](https://www.youtube.com/watch?v=eI049nm3VDc&ab_channel=LeicaBLK "scanning with the BLK360")
 
 
