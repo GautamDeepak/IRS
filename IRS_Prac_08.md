@@ -1,5 +1,5 @@
 # Introductory Remote Sensing (ENV202/502)
-Prac 5 - Introduction to Google Earth Engine and basic JavaScript
+Prac 5 - Active remote sensing: Terresterial Laser scanner data collection
 
 
 ### Acknowledgments 
@@ -8,18 +8,30 @@ Prac 5 - Introduction to Google Earth Engine and basic JavaScript
 
 ### Objective
 
-In the last prac, we started working with Landsat images and looked into spectral reflectance of various landcover types. Today, we will continue our journey of working with Landsat-8 images and look into indices to analyse the condition of our landscape. We will specifically look into NDVI (Normalised Difference Vegetation Index) and NDWI (Normalised difference water index). worked with Sentinel-2 imagery. The earlier provides insight into the vegetation cover, vigour, and health, the latter provides insight into the dryness of our landscape including vegetation.
+This week we will start looking into the active remote sensing. Todays prac is not computer based. We have a hands on demonstration of terresterial laser scanning. We will go out in the campus to scan boab trees using one of our laser scanner (Leica BLK360). 
 
 ---------------------------------------------------
+## 1. About the Leica BLK360.
+Leica BLK360 was originally designed for use in arcitecture and surveying. The unit is quite compact that its useful in environmental remote sensing to carry around and scan the area of interest. The Leica BLK360 captures full-colour panoramic images overlaid on a high-accuracy point cloud. It is very compact in size and simple to use with the single push of one button. 
 
-## 1. Loading and displaying satellite images. 
+Have a read about the Leica BLK360 [here](https://leica-geosystems.com/products/laser-scanners/scanners/blk360)
 
-## 5. The complete script used in this Prac
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+
+
+Have a look at the introduction to the BLK360 [here](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK) 
+
+Have a look at the scanning with the BLK360 [here](https://www.youtube.com/watch?v=eI049nm3VDc&ab_channel=LeicaBLK)
+
+## 2. Demonstration
+1. Now its our turn to scan - lets go to Boab court. 
+ 
+2. We will scan around Boab court and you will use this data to learn the CloudCompare in next week prac.
 
 -------
 ### Thank you
 
-I hope you found this prac useful. A recorded video of this prac can be found on your learnline. After this prac, you are ready to complete Assignment#2.  Coming up next week: image classification and accuracy assessment.
+I hope you found this prac useful. A recorded video of this prac can be found on your learnline. 
 
 #### Kind regards, Deepak Gautam
 ------
