@@ -18,7 +18,7 @@ Have a read about the Leica BLK360 [here](https://leica-geosystems.com/products/
 
 Have a look at the introduction to the BLK360
 
-[![An Intro to the BLK360](http://i.imgur.com/Ot5DWAW.png)](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK "An Intro to the BLK360")
+[![An Intro to the BLK360](https://www.youtube.com/embed/Fpr8iumcW28)](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK "An Intro to the BLK360")
 
 
  [here](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK) 
