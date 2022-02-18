@@ -24,7 +24,7 @@ Have a look at the introduction to the BLK360
  [here](https://www.youtube.com/watch?v=Fpr8iumcW28&ab_channel=LeicaBLK) 
 
 Have a look at the scanning with the BLK360 
-[![scanning with the BLK360](Figures/Prac08_Leica.png)](https://www.youtube.com/watch?v=eI049nm3VDc&ab_channel=LeicaBLK "scanning with the BLK360")
+[![scanning with the BLK360](Figures/Prac08_ScanningWithBLK360.png)](https://www.youtube.com/watch?v=eI049nm3VDc&ab_channel=LeicaBLK "scanning with the BLK360")
 
 
 ## 2. Demonstration
