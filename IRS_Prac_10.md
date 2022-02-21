@@ -95,7 +95,7 @@ The objective of this Prac is to familiarise yourself with 3D pointcloud data. W
 
 19. Now zoom in to check the details. In the below example, I have zoomed in to the same tree where I noticed offset earlier. The tree seems to be represented better here. The ICP has done the final fine-tuning of the pointcloud alignment for us.   
 
-![Figure 11. Translate](Figures/Prac10_ICPFinal.png)
+![Figure 11. Translate](Figures/Prac10_Final.png)
 
 20. After the alignment/registration, most of the occlusion seems to have been resolved. For instance, on a single scan, you could see plenty of occlusions while in the two aligned scans, you can see less occlusion, whilst some occlusions are still present towards the edge of the scans. Do you know how you could resolve those occlusions towards the edge? Don't forget to save your work. 
   
