@@ -7,7 +7,7 @@ Prac 9 - Working with Terrestrial Laser Scanning (TLS) data in CloudCompare
 
 ### Prerequisites
 
-Completion of this Prac exercise requires use of the CloudCompare software package. CloudCompare is a powerful package for visualising and processing point-clouds, and best of all is open-access. You can download the version to match your operating system [here](https://www.danielgm.net/cc/)
+Completion of this Prac exercise requires use of the CloudCompare software package. CloudCompare is a powerful package for visualising and processing point-clouds, and best of all is open-access. You can download the version to match your operating system. [Download here](https://www.danielgm.net/cc/)
 
 ### Objective
 The objective of this Prac is to familiarise yourself with 3D point cloud data. We will use data that we collected last week on campus in the Boab court. 
