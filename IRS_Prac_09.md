@@ -11,14 +11,15 @@ Completion of this Prac exercise requires use of the CloudCompare software packa
 
 ### Objective
 The objective of this Prac is to familiarise yourself with 3D point cloud data. We will use data that we collected last week on campus in the Boab court. 
+
 ---------------------------------------------------
 
 ## 1. Downloading the data.
-1. We collected multiple scans with a Leica BLK360 laser scanner, and we will work with two of these scans today.
+1. We collected multiple scans with a Leica BLK360 laser scanner at Boab court in front of the Mal Narin Auditorium, and we will work with two of these scans today.
 
-![Figure 1. Leica BLK360 scanning](Prac8/leica.png)
+![Figure 1. Leica BLK360 scanning](Figures/Prac09_BoabLidar.png)
 
-2. Scan data can be downloaded in .las format below (please note that each file is ~ 200 MB):
+2. The Scan data is coverted from native BLK360 format to a .las format. In the link below you can downoad the .las format which can be read by the CloudCompare (please note that each file is ~ 200 MB):
 
 - [Scan 1](https://charlesdarwinuni-my.sharepoint.com/:u:/g/personal/deepak_gautam_cdu_edu_au/EQLh_JE920JLp_blNIwjTKsBiGV8vVQzt1FMhq6hNhOvAw?e=6X6zBP) | [Scan 2](https://charlesdarwinuni-my.sharepoint.com/:u:/g/personal/deepak_gautam_cdu_edu_au/ERJnGoCYMHVAi85v6DKOWMIB5e4ydWOG5zyEwNVHqeTEFQ?e=4q7Ar5)
 
