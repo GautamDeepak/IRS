@@ -136,8 +136,7 @@ print('Mean NDVI of the stressed vine is:', stressedNDVI.get('b5'));
 
 ## 6. The complete script used in this Prac
 
-```
-JavaScript
+```JavaScript
 // Import the UAV image into your coding environment.
 var UAVImage = ee.Image("users/dipsgautam/20200309_alex_east_ms_orthomosaic_2cm_mga54");
 
