@@ -4,7 +4,7 @@ Prac 11 - Drone remote sensing
 
 ### Acknowledgments 
 
-- Wine Australia and University of Adelaide.
+- [Wine Australia](https://www.wineaustralia.com/) and [University of Adelaide](https://sciences.adelaide.edu.au/agriculture-food-wine/).
 - Data from [this publication](https://www.mdpi.com/2072-4292/13/13/2639/htm)
 
 ### Objective
