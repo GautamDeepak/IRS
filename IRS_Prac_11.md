@@ -3,10 +3,9 @@ Prac 11 - Drone remote sensing
 
 
 ### Acknowledgments 
-- [Earth Engine Beginning Curriculum](https://docs.google.com/document/d/1ZxRKMie8dfTvBmUNOO0TFMkd7ELGWf3WjX0JvESZdOE/edit#!)
-- [Google Earth Engine guide](https://developers.google.com/earth-engine/guides)
-- University of Adelaide
-- Wine Australia bilateral project
+
+- Wine Australia and University of Adelaide.
+- Data from [this publication](https://www.mdpi.com/2072-4292/13/13/2639/htm)
 
 ### Objective
 
