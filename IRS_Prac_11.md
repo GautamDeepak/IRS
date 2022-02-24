@@ -103,7 +103,7 @@ Map.addLayer(maskedNDVIImage, {min: 0.4, max: 1, palette: ['yellow','green','dar
 ```
 ![Figure 1. Leica BLK360 scanning](Figures/Prac11_MaskedNDVI.png)
 
-## 5. Extract canopy-specific NDVI value
+## 4. Extract canopy-specific NDVI value
 1. Disable all the layers except for the true color. Zoom in to maximum extent and find a vine that looks healthy to you. Now use the rectangular polygon tool to draw approximately 2x2 m polygon. Hint- use the map scale as a reference. We are dwaring approximately 2x2 m polygon because we know the approximate vine length is 2 m. 
 
 ![Figure 1. Leica BLK360 scanning](Figures/Prac11_Polygon1.png)
@@ -134,7 +134,7 @@ print('Mean NDVI of the stressed vine is:', stressedNDVI.get('b5'));
 
 6. Thats all for today. Dont forget to save your script. 
 
-## 6. The complete script used in this Prac
+## 5. The complete script used in this Prac
 
 ```JavaScript
 // Import the UAV image into your coding environment.
