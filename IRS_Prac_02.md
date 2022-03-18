@@ -144,7 +144,10 @@ Map.addLayer(anImage,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 
 10. Don't forget to save your script. You can use CTRL+S in the windows computer (Command+S in Mac) to save your script. 
 
-## 4. The complete script used in this Prac
+## 4. Exercise for you
+1. Using the scripts/knowledge we learnt today, try displaying the landsat-8 true color image from Darwin region. Use this image name "LANDSAT/LC08/C01/T1_TOA/LC08_106069_20210511". 
+
+## 5. The complete script used in this Prac
 ```JavaScript
 // print the image information to the console
 print(theSRTM);
