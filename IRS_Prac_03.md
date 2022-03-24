@@ -150,12 +150,12 @@ Map.addLayer(anImage, falseLandWaterViz, "false-color Land/Water");
 
 ## 4. Exercise for you
 
-1. Filter the Sentinel-2 image collection to get two cloud-free images from the Darwin region during the wet season of 2016 and the dry season of 2021.
-*Hint: You need to do the filtering two times. First filtering to get the 2016 image and the second filtering to get the 2021 image. Store the two images in two variables e.g. var wet2016Image = ..., and var dry2021Image = ...*
+1. Filter the Sentinel-2 image collection to get two cloud-free images from the Darwin region during the dry season of 2016 and the dry season of 2021.
+*Hint: You need to do the filtering two times. First filtering to get the 2016 image and the second filtering to get the 2021 image. Store the two images in two variables e.g. var dry2016Image = ..., and var dry2021Image = ...*
 
 2. Display the two images in true colour composite and examine what has changed in the landscape between 2016 and 2021. 
 
-3. Display the two images in false colour infrared composite and examine how has vegetation cover and condition has changed in the six years.  
+3. Display the two images in false colour infrared composite and examine how vegetation cover and condition has changed in the six years.  
 
 4. So far we have only explored two visualisation options (true-colour and false-colour infrared), but there are many more possible combinations:
     - True colour: 4 3 2
