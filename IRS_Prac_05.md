@@ -8,7 +8,7 @@ Prac 5 - Introduction to Google Earth Engine and basic JavaScript
 
 ### Objective
 
-In the last prac, we started working with Landsat images and looked into spectral reflectance of various landcover types. Today, we will continue our journey of working with Landsat-8 images and look into indices to analyse the condition of our landscape. We will specifically look into NDVI (Normalised Difference Vegetation Index) and NDWI (Normalised difference water index). worked with Sentinel-2 imagery. The earlier provides insight into the vegetation cover, vigour, and health, the latter provides insight into the dryness of our landscape including vegetation.
+In the last prac, we started working with Landsat images and looked into spectral reflectance of various landcover types. Today, we will continue our journey of working with Landsat-8 images and look into indices to analyse the condition of our landscape. We will specifically look into NDVI (Normalised Difference Vegetation Index) and NDWI (Normalised difference water index). The earlier provides insight into the vegetation cover, vigour, and health, the latter provides insight into the dryness of our landscape including vegetation.
 
 ---------------------------------------------------
 
@@ -132,13 +132,13 @@ var wetNDVI = wetImage.expression(
   });    
 
 // calculate deltaNDVI
-var deltaNDVI = wetNDVI.subtract(ndwiImage);
+var deltaNDVI = wetNDVI.subtract(ndviImage);
 // Map delta NDVI.
 Map.addLayer(deltaNDVI, {min: -1, max: 1, palette: ['red','yellow','green']}, "deltaNDVI");
 ```
 ![Figure 18. polygon](Figures/Prac05_DeltaNDVI.png)
 
-5. What you see is the change in NDVI (wet-dry). So, all the green pixels represents the area where NDVI has increased through time. The yellow pixels represents the area where NDVI has remained almost similar, and the red pixels represent the decrease in NDVI value. You also need to interpret the images based on not just wet and dry but in the context of when the image was captured. The wet image happens to be captured at the end of the dry season in 20151002 while the dry image happens to be captured towards the start of the dry season 20160513. Hence the deltaNDVI appearing mostly green makes sense. Perhaps you can modify filtering to get images from the end of wet and end of dry to see how NDVI has changed. 
+5. What you see is the change in NDVI (wet-dry). So, all the green pixels represents the area where NDVI has increased through time. The yellow pixels represents the area where NDVI has remained almost similar, and the red pixels represent the decrease in NDVI value. You also need to interpret the images based on not just wet and dry but in the context of when the image was captured. The wet image happens to be captured at the end of the dry season in 20151002 while the dry image happens to be captured towards the start of the dry season 20160513.  
  
 ## 5. The complete script used in this Prac
 
