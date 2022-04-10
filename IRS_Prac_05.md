@@ -195,7 +195,7 @@ var wetNDVI = wetImage.expression(
   });    
 
 // calculate deltaNDVI
-var deltaNDVI = wetNDVI.subtract(ndwiImage);
+var deltaNDVI = wetNDVI.subtract(ndviImage);
 // Map delta NDVI.
 Map.addLayer(deltaNDVI, {min: -1, max: 1, palette: ['red','yellow','green']}, "deltaNDVI");
 ```
