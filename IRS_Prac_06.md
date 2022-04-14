@@ -243,7 +243,7 @@ print ('Forest area in (km²):', ee.Number(forestArea.get('classification')).div
 -------
 ### Thank you
 
-I hope you found this prac useful. A recorded video of this prac can be found on your learnline. After this prac, you are ready to complete Assignment#2.  Coming up next week: accuracy assessment.
+I hope you found this prac useful. A recorded video of this prac can be found on your learnline. Coming up next week: accuracy assessment.
 
 #### Kind regards, Deepak Gautam
 ------
