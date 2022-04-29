@@ -131,7 +131,7 @@ var valLandCoverClasses = vWater.merge(vUrban).merge(vForest).merge(vAgriculture
 3. Again similar to the training dataset, sample your validation dataset. Note that this validation dataset is sampled from the classified image while the training dataset was sampled from the original image.  
 
 ```JavaScript
-var validationDataset = classified.sampleRegions({
+var validationDataset = classifiedImage.sampleRegions({
   collection: valLandCoverClasses,
   properties: ['landcover'],
   scale: 30,
